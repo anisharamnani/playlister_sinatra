@@ -1,0 +1,10 @@
+<ul> 
+	<% 
+		Artist::ARTISTS.each_with_index do |artist|  %> 
+		<li>
+		<%= 
+			"#{artist.name}: #{artist.songs.size} Songs" 
+		%>
+	</li>
+	<% end %>
+</ul>

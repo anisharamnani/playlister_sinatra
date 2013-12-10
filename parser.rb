@@ -1,3 +1,9 @@
+require './lib/artist'
+require './lib/genre'
+require './lib/song'
+require 'awesome_print'
+require 'ruby-debug'
+
 class Parser
 
 	attr_accessor :entries, :artists, :genres

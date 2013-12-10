@@ -1,12 +1,9 @@
-require './parser' 
-require 'ruby-debug'
-
-class App
+class Playlister
 
 	attr_accessor :parser
 	
-	def initialize 
-		@parser = Parser.new("data")
+	def initialize(parser) 
+		@parser = parser
 	end
 
 	def welcome_message 
@@ -22,6 +19,11 @@ class App
 		end
 		user_input 
 	end
+
+	def get_artists  
+		Artist::ARTISTS.each_with_index {|artist, i| return "#{i+1}. 
+		#{artist.name}: #{artist.songs.size} Songs"} 
+	end 
 
 	def list_names user_input
 		if user_input == "ARTIST"
@@ -99,10 +101,6 @@ class App
 	end 
 
 end 
-
-playlister = App.new
-playlister.play
-
 # app = App.new 
 # app.welcome_message
 # user_input = app.browse
