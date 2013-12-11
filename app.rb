@@ -25,11 +25,14 @@ module Box
 			erb :genres
 		end
 
-		get '/song/:type'
-			@song_name = "#{params[:type]}"
+		# get '/song/:type'
+		# 	@song_name = "#{params[:type]}"
+		# 	erb :song
+		# end 
+
+		get '/genres/:type' do
+			@genre_name = "#{params[:type]}"
+			erb :genre 
 		end 
-
-
-
 	end 
 end 

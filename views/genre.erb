@@ -1,0 +1,16 @@
+<ul> 
+	<%= @genre_name %>
+		<% 
+			searched = Genre::GENRES.detect{|genre| genre.name.upcase == @genre_name.upcase}
+			searched.songs.each_with_index do |song|
+		%>
+		<li>
+			<%= 
+				"#{song.name}" 
+			%>
+		</li>
+		<%end%>
+</ul> 
+
+
+
