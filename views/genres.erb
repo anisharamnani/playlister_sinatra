@@ -2,9 +2,11 @@
 	<% 
 		Genre::GENRES.each do |genre|  %> 
 		<li>
-		<%= 
-			"#{genre.name.capitalize}: #{genre.artists.size} Artists"
-		%>
-	</li>
+		<a href=<%="/genres/#{genre.name}"%>>	
+			<%= 
+				"#{genre.name.capitalize}: #{genre.artists.size} Artists"
+			%>
+		</a>
+		</li>
 	<% end %>
 </ul>

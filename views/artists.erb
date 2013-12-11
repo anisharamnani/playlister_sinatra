@@ -4,9 +4,11 @@
 		Artist::ARTISTS.each do |artist|  
 	%> 
 	<li>
+	<a href=<%="/artists/#{artist.name.gsub(" ", "_")}"%>>
 		<%= 
 			"#{artist.name}: #{artist.songs.size} Songs" 
 		%>
+	</a>
 	</li>
 	<% end %>
 </ul>

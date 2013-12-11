@@ -31,7 +31,8 @@ module Box
 		end 
 
 		get '/artists/:type' do 
-			@artist_name = "#{params[:type]}"
+			@artist_display = "#{params[:type]}"
+			@artist_name = @artist_display.gsub("_", " ")
 			erb :artist
 		end 
 
@@ -40,8 +41,9 @@ module Box
 			erb :genre 
 		end 
 
-		get '/songs/:type' do
-			@song_name = "#{params[:type]}"
+		get '/songs/:song' do
+			@song_display = "#{params[:song]}"
+			@song_name = @song_display.gsub("_", " ")
 			erb :song
 		end 
 
