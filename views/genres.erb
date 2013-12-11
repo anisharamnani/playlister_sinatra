@@ -1,0 +1,10 @@
+<ul> 
+	<% 
+		Genre::GENRES.each do |genre|  %> 
+		<li>
+		<%= 
+			"#{genre.name.capitalize}: #{genre.artists.size} Artists"
+		%>
+	</li>
+	<% end %>
+</ul>

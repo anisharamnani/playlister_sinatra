@@ -18,12 +18,18 @@ module Box
 		end
 
 		get '/artists' do
-			erb :artist
+			erb :artists
 		end 
 
-		# get '/genres' do
+		get '/genres' do
+			erb :genres
+		end
 
-		# end 
+		get '/song/:type'
+			@song_name = "#{params[:type]}"
+		end 
+
+
 
 	end 
 end 
