@@ -21,8 +21,7 @@ class Playlister
 	end
 
 	def get_artists  
-		Artist::ARTISTS.each_with_index {|artist, i| return "#{i+1}. 
-		#{artist.name}: #{artist.songs.size} Songs"} 
+		Artist::ARTISTS.each_with_index {|artist, i| return "#{i+1}. #{artist.name}: #{artist.songs.size} Songs"} 
 	end 
 
 	def list_names user_input

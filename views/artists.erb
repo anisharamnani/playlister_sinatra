@@ -1,7 +1,9 @@
+<h1> Artists </h1>
 <ul> 
 	<% 
-		Artist::ARTISTS.each do |artist|  %> 
-		<li>
+		Artist::ARTISTS.each do |artist|  
+	%> 
+	<li>
 		<%= 
 			"#{artist.name}: #{artist.songs.size} Songs" 
 		%>

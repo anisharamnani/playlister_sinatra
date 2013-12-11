@@ -4,7 +4,8 @@ require './lib/artist'
 require './lib/genre'
 require './lib/song'
 require './lib/parser'
-require './lib/playlister'
+#we don't need this because it's all display logic in our views
+#require './lib/playlister'
 
 
 module Box 
@@ -25,10 +26,14 @@ module Box
 			erb :genres
 		end
 
-		# get '/song/:type'
-		# 	@song_name = "#{params[:type]}"
-		# 	erb :song
-		# end 
+		get '/songs' do 
+			erb :songs 
+		end 
+
+		get '/song/:type'
+		 	@song_name = "#{params[:type]}"
+		 	erb :song
+		end 
 
 		get '/genres/:type' do
 			@genre_name = "#{params[:type]}"
