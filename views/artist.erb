@@ -1,0 +1,13 @@
+<ul> 
+	<h2> <%= @artist_name %> </h2>
+		<% 
+			searched = Artist::ARTISTS.detect{|artist| artist.name.upcase == @artist_name.upcase}
+			searched.songs.each do |song|
+		%>
+		<li>
+			<%= 
+				"#{song.name}" 
+			%>
+		</li>
+		<%end%>
+</ul> 

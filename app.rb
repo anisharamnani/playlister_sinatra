@@ -30,14 +30,20 @@ module Box
 			erb :songs 
 		end 
 
-		get '/song/:type'
-		 	@song_name = "#{params[:type]}"
-		 	erb :song
+		get '/artists/:type' do 
+			@artist_name = "#{params[:type]}"
+			erb :artist
 		end 
 
 		get '/genres/:type' do
 			@genre_name = "#{params[:type]}"
 			erb :genre 
 		end 
+
+		get '/songs/:type' do
+			@song_name = "#{params[:type]}"
+			erb :song
+		end 
+
 	end 
 end 

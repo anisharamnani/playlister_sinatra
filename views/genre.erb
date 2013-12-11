@@ -1,8 +1,8 @@
 <ul> 
-	<%= @genre_name %>
+	<h2> <%= @genre_name %> </h2>
 		<% 
 			searched = Genre::GENRES.detect{|genre| genre.name.upcase == @genre_name.upcase}
-			searched.songs.each_with_index do |song|
+			searched.songs.each do |song|
 		%>
 		<li>
 			<%= 

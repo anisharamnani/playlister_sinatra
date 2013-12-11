@@ -1,0 +1,23 @@
+<ul> 
+		<% 
+		Artist::ARTISTS.each do |artist|
+			artist.songs.each do |song|
+				if song.name == @song_name 
+		%> 
+		
+
+		<li> 
+			<%= "Song: #{song.name}" %> 
+		</li>
+
+		<li>
+			<%= "Artist: #{artist.name}" %>
+		</li>
+
+		<li>
+			<%= "Genre: #{song.genre.name.capitalize}" %>
+		</li>
+				<%end%>
+			<%end%>
+		<%end%>
+</ul> 
